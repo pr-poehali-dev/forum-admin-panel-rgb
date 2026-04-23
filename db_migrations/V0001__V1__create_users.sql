@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS t_p16479477_forum_admin_panel_rg.users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  avatar_url TEXT,
+  bio TEXT,
+  role VARCHAR(20) DEFAULT 'member',
+  rgb_profile BOOLEAN DEFAULT false,
+  rgb_color1 VARCHAR(7) DEFAULT '#a855f7',
+  rgb_color2 VARCHAR(7) DEFAULT '#06b6d4',
+  rgb_color3 VARCHAR(7) DEFAULT '#ec4899',
+  title VARCHAR(100),
+  post_count INTEGER DEFAULT 0,
+  reputation INTEGER DEFAULT 0,
+  is_banned BOOLEAN DEFAULT false,
+  is_muted BOOLEAN DEFAULT false,
+  ban_expires_at TIMESTAMP,
+  mute_expires_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT NOW(),
+  last_seen_at TIMESTAMP DEFAULT NOW()
+)

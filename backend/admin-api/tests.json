@@ -1,0 +1,5 @@
+{
+  "tests": [
+    {"name": "Get users unauthorized", "method": "GET", "path": "/users", "expectedStatus": 401, "expectedBody": {"error": "Unauthorized"}, "bodyMatcher": "partial"}
+  ]
+}

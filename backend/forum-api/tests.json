@@ -1,0 +1,7 @@
+{
+  "tests": [
+    {"name": "Get categories", "method": "GET", "path": "/categories", "expectedStatus": 200, "expectedBody": {"categories": []}, "bodyMatcher": "partial"},
+    {"name": "Get stats", "method": "GET", "path": "/stats", "expectedStatus": 200, "expectedBody": {"users": 0}, "bodyMatcher": "partial"},
+    {"name": "Get settings", "method": "GET", "path": "/settings", "expectedStatus": 200, "expectedBody": {"forum_name": "NeonForum"}, "bodyMatcher": "partial"}
+  ]
+}
